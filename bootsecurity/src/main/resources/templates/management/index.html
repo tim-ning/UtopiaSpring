@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+<body>
+	<header th:insert="fragments.html :: nav"></header>
+	<!-- Page content goes here -->
+	<div class="container">
+		<p>This is Management\Index. Only people with role_management can
+			see this</p>
+
+		<br />
+		<h1 style="text-decoration: underline;">Employee/Agent - Flight Menu</h1>
+		<br />
+		<hr>
+
+		<h3>View All Flights:</h3>
+		<a target="_blank" href="http://localhost:8080/utopia/flight">View
+			All Flights</a>
+		<hr>
+
+		<h3>Update Flight Details:</h3>
+		<form action="http://localhost:8080/utopia/flight/add" method="post"
+			target="_blank">
+			<table>
+				<tr>
+					<td>id:</td>
+					<td><input name="id"></td>
+				</tr>
+				<tr>
+					<td>routeId:</td>
+					<td><input name="routeId"></td>
+				</tr>
+				<tr>
+					<td>airplaneId:</td>
+					<td><input name="airplaneId"></td>
+				</tr>
+				<tr>
+					<td>departureTime:</td>
+					<td><input name="departureTime"></td>
+				</tr>
+				<tr>
+					<td>reservedSeats:</td>
+					<td><input name="reservedSeats"></td>
+				</tr>
+				<tr>
+					<td>seatPrice:</td>
+					<td><input name="seatPrice"></td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit">
+		</form>
+		<hr>
+
+		<h3>View All Routes:</h3>
+		<a target="_blank" href="http://localhost:8080/utopia/route">View
+			All Routes</a>
+		<hr>
+
+		<h3>Add Route:</h3>
+		<form action="http://localhost:8080/utopia/route/add" method="post"
+			target="_blank">
+			<table>
+				<tr>
+					<td>originId:</td>
+					<td><input name="originId"></td>
+				</tr>
+				<tr>
+					<td>destinationId:</td>
+					<td><input name="destinationId"></td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit">
+		</form>
+		<hr>
+
+		<div style="height: 250px;"></div>
+
+	</div>
+</body>
+</html>

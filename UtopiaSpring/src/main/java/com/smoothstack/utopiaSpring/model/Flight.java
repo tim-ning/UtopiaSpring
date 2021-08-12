@@ -1,6 +1,8 @@
 package com.smoothstack.utopiaSpring.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -9,6 +11,19 @@ public class Flight {
 	@Id
 	private Long id;
 	private String routeId, airplaneId, departureTime, reservedSeats, seatPrice;
+
+	public Flight() {
+	}
+
+	public Flight(Long id, String routeId, String airplaneId, String departureTime, String reservedSeats,
+			String seatPrice) {
+		this.id = id;
+		this.routeId = routeId;
+		this.airplaneId = airplaneId;
+		this.departureTime = departureTime;
+		this.reservedSeats = reservedSeats;
+		this.seatPrice = seatPrice;
+	}
 
 	public Long getId() {
 		return id;

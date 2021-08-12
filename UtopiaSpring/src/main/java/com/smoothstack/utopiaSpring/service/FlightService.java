@@ -33,8 +33,24 @@ public class FlightService {
 		return routeDao.findAll();
 	}
 
+	public Route addRoute(Route newRoute) {
+		return routeDao.save(newRoute);
+	}
+
+	public void deleteRoute(Long id) {
+		routeDao.deleteById(id);
+	}
+
 	public List<Airport> readAllAirports() {
 		return airportDao.findAll();
+	}
+
+	public Flight addFlight(Flight newFlight) {
+		return flightDao.save(newFlight);
+	}
+
+	public void deleteFlight(Long id) {
+		flightDao.deleteById(id);
 	}
 
 }
