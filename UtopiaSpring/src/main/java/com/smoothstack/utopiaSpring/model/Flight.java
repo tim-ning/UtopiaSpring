@@ -74,4 +74,7 @@ public class Flight {
 		this.seatPrice = seatPrice;
 	}
 
+	/*
+	 * 
+	 */
 }

@@ -48,7 +48,7 @@ public class FlightService {
 					+ a1.getIataId() + ", " + a1.getCity() + "</td><td>" + f.getDepartureTime() + "</td><td>"
 					+ f.getReservedSeats() + "</td><td>" + "$" + f.getSeatPrice() + "</td></tr>");
 		}
-
+		
 		sb.append(pageEnd);
 		return sb.toString();
 	}
@@ -110,7 +110,6 @@ public class FlightService {
 	}
 
 	/*
-	 * 
 	 * 
 	 * 
 	 * 
