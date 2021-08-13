@@ -27,7 +27,7 @@ public class BookingService {
 		return bookingDao.save(newBooking);
 	}
 
-	public void deleteFlight(Long id) {
+	public void deleteBooking(Long id) {
 		bookingDao.deleteById(id);
 	}
 	
