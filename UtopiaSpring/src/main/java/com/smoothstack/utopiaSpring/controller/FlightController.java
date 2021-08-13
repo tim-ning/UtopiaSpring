@@ -26,13 +26,18 @@ public class FlightController {
 	@Autowired
 	private FlightService service;
 
+	@GetMapping("/flightroutes")
+	public String readAllFlightsAndRoutes() {
+		return service.readAllFlightsAndRoutes();
+	}
+
 	@GetMapping("/flight")
 	public List<Flight> readAllFlights() {
 		return service.readAllFlights();
 	}
 
 	@PostMapping("/flight/add")
-	public Flight addFlight(@RequestParam("id") Long id, @RequestParam("routeId") String routeId,
+	public Flight addFlight(@RequestParam("id") Long id, @RequestParam("routeId") Long routeId,
 			@RequestParam("airplaneId") String airplaneId, @RequestParam("departureTime") String departureTime,
 			@RequestParam("reservedSeats") String reservedSeats, @RequestParam("seatPrice") String seatPrice) {
 		return service.addFlight(new Flight(id, routeId, airplaneId, departureTime, reservedSeats, seatPrice));
@@ -50,7 +55,7 @@ public class FlightController {
 	}
 
 	@GetMapping("/route")
-	public List<Route> readAllRoutes() {
+	public String readAllRoutes() {
 		return service.readAllRoutes();
 	}
 
@@ -67,7 +72,7 @@ public class FlightController {
 	}
 
 	@GetMapping("/airport")
-	public List<Airport> readAllAirports() {
+	public String readAllAirports() {
 		return service.readAllAirports();
 	}
 

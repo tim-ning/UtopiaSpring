@@ -10,12 +10,13 @@ public class Flight {
 
 	@Id
 	private Long id;
-	private String routeId, airplaneId, departureTime, reservedSeats, seatPrice;
+	private Long routeId;
+	private String airplaneId, departureTime, reservedSeats, seatPrice;
 
 	public Flight() {
 	}
 
-	public Flight(Long id, String routeId, String airplaneId, String departureTime, String reservedSeats,
+	public Flight(Long id, Long routeId, String airplaneId, String departureTime, String reservedSeats,
 			String seatPrice) {
 		this.id = id;
 		this.routeId = routeId;
@@ -33,11 +34,11 @@ public class Flight {
 		this.id = id;
 	}
 
-	public String getRouteId() {
+	public Long getRouteId() {
 		return routeId;
 	}
 
-	public void setRouteId(String routeId) {
+	public void setRouteId(Long routeId) {
 		this.routeId = routeId;
 	}
 
