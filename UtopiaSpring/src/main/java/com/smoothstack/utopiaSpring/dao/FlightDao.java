@@ -7,5 +7,5 @@ import com.smoothstack.utopiaSpring.model.Flight;
 
 @Repository
 public interface FlightDao extends JpaRepository<Flight, Long> {
-
+	
 }

@@ -23,7 +23,7 @@ public class DbInit implements CommandLineRunner {
         // Delete all
         this.userRepository.deleteAll();
 
-        // Crete users
+        // Create users
         User dan = new User("dan",passwordEncoder.encode("dan123"),"USER","");
         User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
         User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
